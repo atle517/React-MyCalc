@@ -1,0 +1,40 @@
+.component-button {
+    width: 25%;
+    height: 50px;
+    font-family: "Calibri";
+    font-size: 1.75rem;
+    float:left;
+    outline:none;
+    
+}   
+
+.component-button.wide {
+    width: 50%;
+}
+
+/* Red button */
+.component-button.red {
+    background-color: #ff5d5d;
+}
+
+.component-button.red:hover {
+    background-color: #ff4949;
+}
+
+.component-button.red:active {
+    background-color: #ff5d5d;
+}
+
+/* Blue button */
+.component-button.blue {
+    background-color: #5d93ff;
+}
+
+.component-button.blue:hover {
+    background-color: #4a85fc;
+}
+
+.component-button.blue:active {
+    background-color: #5d93ff;
+}
+
