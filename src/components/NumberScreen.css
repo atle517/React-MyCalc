@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'calcFont';
+    src: url('../data/digital-7.ttf');
+  }
+
+.number-screen {
+    background-color: #009616;
+    width: 90%;
+    height: 50px;
+    transform: translate(5.5%, 15%);
+
+    font-family: "calcFont";
+    color: rgb(10, 34, 0);
+    font-size: 3rem;
+    text-align: right;
+    box-sizing: border-box;
+
+    padding-right: 8px;
+}

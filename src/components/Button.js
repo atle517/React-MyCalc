@@ -4,10 +4,6 @@ import './Button.css';
 
 class Button extends Component {
 
-    static propTypes = {
-        wide: propTypes.bool
-    }
-
     constructor(props) {
         super(props);
 
@@ -16,25 +12,45 @@ class Button extends Component {
         //Set Button styling
         let p = props;
 
-        if (p.wide && p.color === "red") {
-            this.className = "component-button wide red";
-        } else if (p.wide) {
-            this.className = "component-button wide";
-        } else if (p.color === "blue") {
-            this.className = "component-button blue";
-        } else {
-            this.className = "component-button";
+        this.className = "component-button";
+
+        //Wide or small
+        if (p.wide) {
+            this.className += " wide"
+        } else if (p.small) {
+            this.className += " small";
+        }
+
+        //Colors
+        // eslint-disable-next-line default-case
+        switch (p.color) {
+            case "blue":
+                this.className += " blue";
+                break;
+
+            case "red":
+                this.className += " red";
+                break;
+
+            case "orange":
+                this.className += " orange";
+                break;
+
         }
 
     }
 
     render() {
-        return (
-            <div>
-                <button className={this.className} onClick={() => this.props.clickHandler(this.buttonValue)}>{this.buttonValue}</button>
-            </div>
-        )
+        return <button className={this.className} onClick={() => this.props.clickHandler(this.buttonValue)} >{this.buttonValue}</button>
+
     }
 }
+
+// Prop types
+Button.propTypes = {
+    wide: propTypes.bool,
+    color: propTypes.string
+}
+
 
 export default Button

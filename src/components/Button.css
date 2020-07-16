@@ -1,40 +1,73 @@
 .component-button {
-    width: 25%;
+    width: 100%;
     height: 50px;
     font-family: "Calibri";
     font-size: 1.75rem;
-    float:left;
     outline:none;
-    
-}   
 
-.component-button.wide {
-    width: 50%;
+    background-color: #2e2e2e;
+    border: none;
+    color: white;
+    text-align: center;
+
+    border-radius: 10px;
+    border-bottom:black 2px solid;  
+}
+
+.component-button:hover {
+    cursor: pointer;
+    background-color: #cccccc46;
+}
+
+.component-button:active {
+    background-color: #222222;
+
+    border-top:black 2px solid;
+    border-bottom:#303030 2px solid;
+}
+
+.wide {
+    grid-column: span 2;
 }
 
 /* Red button */
-.component-button.red {
+.red {
     background-color: #ff5d5d;
 }
 
-.component-button.red:hover {
-    background-color: #ff4949;
+.red:hover {
+    cursor: pointer;
+    background-color: #ff8686;
 }
 
-.component-button.red:active {
-    background-color: #ff5d5d;
+.red:active {
+    background-color: #8f3535;
 }
 
 /* Blue button */
-.component-button.blue {
-    background-color: #5d93ff;
+.blue {
+    background-color: #3a7cff;
 }
 
-.component-button.blue:hover {
-    background-color: #4a85fc;
+.blue:hover {
+    cursor: pointer;
+    background-color: #89b0ff;
 }
 
-.component-button.blue:active {
-    background-color: #5d93ff;
+.blue:active {
+    background-color: rgb(56, 91, 161);
 }
 
+/* Orange button */
+.orange {
+    background-color: #ff6600;
+}
+
+.orange:hover {
+    cursor: pointer;
+    background-color: #ffa76d;
+}
+
+.orange:active {
+    background-color: #a04000;
+}
