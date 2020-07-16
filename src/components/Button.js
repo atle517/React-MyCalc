@@ -42,7 +42,6 @@ class Button extends Component {
 
     render() {
         return <button className={this.className} onClick={() => this.props.clickHandler(this.buttonValue)} >{this.buttonValue}</button>
-
     }
 }
 

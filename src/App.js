@@ -18,10 +18,6 @@ export default class App extends React.Component {
     }
   }
 
-  isNumeric(value) {
-    return /^-{0,1}\d+$/.test(value);
-  }
-
   addNumber = number => {
 
     // Decide which number should be changed
@@ -51,8 +47,8 @@ export default class App extends React.Component {
     });
   }
 
-  // AC Button - Clear everything
-  clearEverything = () => {
+  // AC Button - All Clear
+  allClear = () => {
     this.setState({
       isNumber1: true,
       number1: "0",
@@ -88,8 +84,10 @@ export default class App extends React.Component {
     let number = this.state.isNumber1 ? this.state.number1 : this.state.number2;
     let changeNumber = this.state.isNumber1 ? "number1" : "number2";
 
+    //Make a new number without the last char/number
     number = number.substring(0, number.length - 1);
 
+    //Update the state
     this.setState({
       [changeNumber]: number
     });
@@ -133,7 +131,7 @@ export default class App extends React.Component {
 
         <div className="calculator-buttons">
           {/* Row 5 */}
-          <Button buttonValue="AC" clickHandler={this.clearEverything} wide color="red" />
+          <Button buttonValue="AC" clickHandler={this.allClear} wide color="red" />
           <Button buttonValue="←" clickHandler={this.removeLast} color="red" />
           <Button buttonValue="/" clickHandler={this.setOperator} color="orange" />
 
